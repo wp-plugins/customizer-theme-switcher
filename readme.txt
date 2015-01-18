@@ -30,6 +30,7 @@ If you're interested in contributing to this project, ping @celloexpressions on 
 * Remove #customize-info for theme previews.
 * Change front-end admin bar Themes link to point to themes in the Customizer (deep-linked).
 * When a new theme is activated, go to the home page (front end), not the themes admin.
+* If user doesn't `confirm` that they want to leave unsaved changes, remove customize-loading body class (requires core patch).
 
 = Code =
 * See inline comments.
@@ -38,6 +39,7 @@ If you're interested in contributing to this project, ping @celloexpressions on 
 * Move `.themes-panel-back` to the Customizer header, adjust JS accordingly.
 * Merge JS into `customizer-controls.js`, after the respective object types.
 * Merge remaining PHP (all in Customize Register callback) into `register_controls()` in `class-wp-customize-manager.php`.
+* Account for https://core.trac.wordpress.org/ticket/26611
 
 == Changelog ==
 See full details here: https://plugins.trac.wordpress.org/log/customizer-theme-switcher.

@@ -58,6 +58,8 @@ function customizer_theme_switcher_register( $wp_customize ) {
 					<span class="screen-reader-text"><?php _e( 'Press return or enter to expand' ); ?></span>
 				</h3>
 				<span class="control-panel-back themes-panel-back" tabindex="-1"><span class="screen-reader-text"><?php _e( 'Back' ); ?></span></span>
+				<div class="theme-overlay" tabindex="0"></div>
+				<div id="customize-container"></div>
 				<div class="customize-themes-panel control-panel-content themes-php">
 					<h2><?php esc_html_e( 'Themes' ); ?>
 						<span class="title-count theme-count"><?php echo count( $this->controls ) - 1; ?></span>
@@ -70,7 +72,6 @@ function customizer_theme_switcher_register( $wp_customize ) {
 						</ul>
 					</div>
 				</div>
-				<div class="theme-overlay" tabindex="0"></div>
 			</li>
 	<?php }
 	}

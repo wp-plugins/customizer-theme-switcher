@@ -1,3 +1,26 @@
+/* #customize-container is reused from customize-loader.js, hence the naming. */
+@-webkit-keyframes customize-reload {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-moz-keyframes customize-reload {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes customize-reload {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.wp-customizer.customize-loading #customize-container {
+	display: block;
+	-webkit-animation: customize-reload .75s; /* Can't use `transition` because `display` changes here. */
+	-moz-animation: customize-reload .75s;
+	animation: customize-reload .75s;
+}
+
 .customize-themes-panel {
 	display: none;
 	padding: 0 8px;

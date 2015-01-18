@@ -108,6 +108,14 @@
 
 				section.closeDetails();
 			});
+
+			section.container.on( 'click keydown', '.theme-actions .button', function( event ) {
+				if ( api.utils.isKeydownButNotEnterEvent( event ) ) {
+					return;
+				}
+
+				$( 'body' ).addClass( 'customize-loading' ); // @todo if they get a `confirm()`, remove the class if they stay (core patch).
+			});
 		},
 
 		/**
@@ -317,6 +325,14 @@
 				}
 
 				api.section( control.section() ).showDetails( control.params.theme );
+			});
+
+			control.container.on( 'click keydown', '.theme-actions .button', function( event ) {
+				if ( api.utils.isKeydownButNotEnterEvent( event ) ) {
+					return;
+				}
+
+				$( 'body' ).addClass( 'customize-loading' ); // @todo if they get a `confirm()`, remove the class if they stay (core patch).
 			});
 		}
 	});

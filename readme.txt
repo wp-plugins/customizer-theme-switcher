@@ -20,6 +20,11 @@ If you're interested in contributing to this project, ping @celloexpressions on 
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Visit the Customizer (Appearance -> Customize) to browse & switch themes.
 
+== Screenshots ==
+1. Themes panel heading.
+2. Themes panel contents.
+3. Single-theme details view, with arrow-navigation.
+
 == Core Merge Notes ==
 = UX =
 * Remove #customize-info for theme previews.

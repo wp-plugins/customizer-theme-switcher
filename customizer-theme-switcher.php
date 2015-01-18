@@ -140,7 +140,7 @@ function customizer_theme_switcher_register( $wp_customize ) {
 
 				<# if ( ! data.theme.active ) { #>
 					<div class="theme-actions">
-						<a class="button button-primary" href="{{{ data.theme.actions.customize }}}"><?php _e( 'Live Preview' ); ?></a>
+						<a class="button" href="{{{ data.theme.actions.customize }}}"><?php _e( 'Live Preview' ); ?></a>
 					</div>
 				<# } #>
 

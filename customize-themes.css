@@ -65,6 +65,10 @@
 	padding-right: 15px;
 }
 
+#themes-filter {
+	width: 100%;
+}
+
 /* Panel-like behavior */
 #accordion-section-themes .accordion-section-title:after {
 	content: "\f341";
@@ -168,6 +172,7 @@
 	top: 45px;
 	bottom: 45px;
 	z-index: 120;
+	max-width: 1740px; /* To ensure that theme screenshots are not displayed larger than 880px wide. */
 }
 
 .theme-overlay .theme-actions {

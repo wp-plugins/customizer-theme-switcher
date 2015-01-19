@@ -116,6 +116,18 @@
 
 				$( 'body' ).addClass( 'customize-loading' ); // @todo if they get a `confirm()`, remove the class if they stay (core patch).
 			});
+
+			section.container.on( 'input', '#themes-filter', function( event ) {
+				var term = event.currentTarget.value.toLowerCase().trim(),
+					controls = section.controls();
+				controls.pop(); // Remove the last control (the add-new control).
+				_.each( controls, function( control ) {
+					control.filter( term );
+				});
+				// Update theme count. Note that the add-theme tile is a div.customize-control.
+				count = section.container.find( 'li.customize-control:visible' ).length;
+				section.container.find( '.theme-count' ).text( count );
+			});
 		},
 
 		/**
@@ -334,6 +346,25 @@
 
 				$( 'body' ).addClass( 'customize-loading' ); // @todo if they get a `confirm()`, remove the class if they stay (core patch).
 			});
+		},
+
+		/**
+		 * Show or hide the theme based on the presence of the term in the title, description, and author.
+		 *
+		 * @since 4.2.0
+		 */
+		filter: function( term ) {
+			// @todo this probably isn't the best way to do this, but it works.
+			var control = this,
+			    haystack = control.params.theme.name.toLowerCase() + ' '
+				           + control.params.theme.description.toLowerCase() + ' '
+				           + control.params.theme.tags.toLowerCase() + ' '
+				           + control.params.theme.author.toLowerCase();
+			if ( -1 !== haystack.search( term ) ) {
+				control.activate();
+			} else {
+				control.deactivate();
+			}
 		}
 	});
 

@@ -28,8 +28,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =====================================================================================
 */
 
-
 add_action( 'customize_register', 'customizer_theme_switcher_register' );
+/**
+ * Register Customizer Objects for theme-switching.
+ *
+ * @param WP_Customize_Manager $wp_customize Customizer manager object.
+ * @since 4.2.0
+ */
 function customizer_theme_switcher_register( $wp_customize ) {
 
 	/**
@@ -224,6 +229,11 @@ function customizer_theme_switcher_register( $wp_customize ) {
 }
 
 add_action( 'customize_controls_print_footer_scripts', 'customize_themes_templates' );
+/**
+ * Print JS templates for the theme-browsing UI.
+ *
+ * @since 4.2.0
+ */
 function customize_themes_templates() {
 	?>
 	<script type="text/html" id="tmpl-customize-themes-details-view">
@@ -279,4 +289,3 @@ function customize_themes_templates() {
 	</script>
 	<?php
 }
-

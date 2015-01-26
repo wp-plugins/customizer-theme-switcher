@@ -3,7 +3,7 @@ Contributors: celloexpressions, wordpressdotorg
 Tags: themes, customizer, theme customizer
 Requires at least: 4.1
 Tested up to: 4.1
-Stable tag: 0.5
+Stable tag: 0.6
 Description: Bridging the UX gap between themes and the Customizer.
 License: GPLv2
 
@@ -48,9 +48,17 @@ Next steps:
 - Designer iterations
 - User testing
 
+= 0.6 =
+* Live Preview button UI tweaks
+* Add a loading indicator as soon as the user clicks live preview, for instant visual feedback while the Customizer reloads
+* Add a search/filter bar when there are more than 5 themes, to make it easier to find a particular theme or feature
+
 = 0.5 =
 * Initial commit.
 
 == Upgrade Notice ==
+= 0.6 =
+* UI/UX improvements: add search bar, loading indicator while switching themes.
+
 = 0.5 =
 * Initial commit.

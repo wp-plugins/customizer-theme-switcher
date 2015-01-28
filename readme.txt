@@ -3,7 +3,7 @@ Contributors: celloexpressions, wordpressdotorg
 Tags: themes, customizer, theme customizer
 Requires at least: 4.1
 Tested up to: 4.1
-Stable tag: 0.6
+Stable tag: 0.7
 Description: Bridging the UX gap between themes and the Customizer.
 License: GPLv2
 
@@ -47,6 +47,9 @@ See full details here: https://plugins.trac.wordpress.org/log/customizer-theme-s
 Next steps:
 - Designer iterations
 - User testing
+
+= 0.7 =
+* Fix script dependencies, props westonruter
 
 = 0.6 =
 * Live Preview button UI tweaks

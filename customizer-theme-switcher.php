@@ -73,7 +73,10 @@ function customizer_theme_switcher_register( $wp_customize ) {
 					<div class="theme-overlay" tabindex="0"></div>
 					<div id="customize-container"></div>
 					<?php if ( 6 < count( $this->controls ) ) : ?>
-						<p><input type="search" id="themes-filter" placeholder="<?php _e( 'Search installed themes...' ); ?>" /></p>
+						<p><label>
+							<span class="screen-reader-text"><?php _e( 'Search installed themes...' ); ?></span>
+							<input type="search" id="themes-filter" placeholder="<?php _e( 'Search installed themes...' ); ?>" />
+						</label></p>
 					<?php endif; ?>
 					<div class="theme-browser rendered">
 						<ul class="themes accordion-section-content">

@@ -331,8 +331,12 @@
 			var control = this;
 
 			// Bind details view trigger.
-			control.container.on( 'click keydown', '.theme-screenshot, .more-details, .theme-name', function( event ) {
+			control.container.on( 'click keydown', '.theme', function( event ) {
 				if ( api.utils.isKeydownButNotEnterEvent( event ) ) {
+					return;
+				}
+
+				if ( 'button' === event.srcElement.className ) {
 					return;
 				}
 

@@ -169,6 +169,10 @@
 	text-align: right; /* Because there's only one action, match the pattern of media modals and right-align the action. */
 }
 
+.modal-open .in-themes-panel #customize-controls .wp-full-overlay-sidebar-content {
+	overflow: visible; /* Prevent the top-level Customizer controls from becoming visible when elements on the right of the details modal are focused.
+}
+
 /* Small Screens */
 @media (max-width:850px), (max-height:472px) {
 	.theme-overlay .theme-wrap {

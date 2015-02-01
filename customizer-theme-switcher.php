@@ -155,10 +155,6 @@ function customizer_theme_switcher_register( $wp_customize ) {
 						<a class="button" href="<?php echo add_query_arg( 'theme', '{{{ data.theme.id }}}', remove_query_arg( 'theme' ) ); ?>" target="_top"><?php _e( 'Live Preview' ); ?></a>
 					</div>
 				<# } #>
-
-				<# if ( data.theme.hasUpdate ) { #>
-					<div class="theme-update"><?php _e( 'Update Available' ); ?></div>
-				<# } #>
 			</div>
 		<?php
 		}
@@ -262,13 +258,6 @@ function customize_themes_templates() {
 					<# } #>
 					<h3 class="theme-name">{{{ data.name }}}<span class="theme-version"><?php printf( __( 'Version: %s' ), '{{{ data.version }}}' ); ?></span></h3>
 					<h4 class="theme-author"><?php printf( __( 'By %s' ), '{{{ data.authorAndUri }}}' ); ?></h4>
-
-					<# if ( data.hasUpdate ) { #>
-					<div class="theme-update-message">
-						<h4 class="theme-update"><?php _e( 'Update Available' ); ?></h4>
-						{{{ data.update }}}
-					</div>
-					<# } #>
 					<p class="theme-description">{{{ data.description }}}</p>
 
 					<# if ( data.parent ) { #>

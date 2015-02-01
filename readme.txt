@@ -3,7 +3,7 @@ Contributors: celloexpressions, wordpressdotorg
 Tags: themes, customizer, theme customizer
 Requires at least: 4.1
 Tested up to: 4.1
-Stable tag: 0.7
+Stable tag: 0.8
 Description: Bridging the UX gap between themes and the Customizer.
 License: GPLv2
 
@@ -45,8 +45,13 @@ If you're interested in contributing to this project, ping @celloexpressions on 
 See full details here: https://plugins.trac.wordpress.org/log/customizer-theme-switcher.
 
 Next steps:
-- Designer iterations
-- User testing
+- More user testing
+- Adjustments per accessibility team feedback
+
+= 0.8 =
+* Misc. bugfixes noted in last week's update post
+* Tweak search to not need hyphens for tags
+* Start accessibility fixes
 
 = 0.7 =
 * Fix script dependencies, props westonruter
@@ -60,6 +65,9 @@ Next steps:
 * Initial commit.
 
 == Upgrade Notice ==
+= 0.8 =
+* Iterations.
+
 = 0.6 =
 * UI/UX improvements: add search bar, loading indicator while switching themes.
 

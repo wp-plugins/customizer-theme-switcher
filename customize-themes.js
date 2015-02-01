@@ -118,7 +118,7 @@
 			});
 
 			section.container.on( 'input', '#themes-filter', function( event ) {
-				var term = event.currentTarget.value.toLowerCase().trim(),
+				var term = event.currentTarget.value.toLowerCase().trim().replace( '-', ' ' ),
 					controls = section.controls();
 				controls.pop(); // Remove the last control (the add-new control).
 				_.each( controls, function( control ) {
@@ -354,12 +354,13 @@
 		 * @since 4.2.0
 		 */
 		filter: function( term ) {
-			// @todo this probably isn't the best way to do this, but it works.
+			// This probably isn't the best way to do this, but it works for searches like an author, a name, a tag (ex. one column), and certain keywords.
 			var control = this,
-			    haystack = control.params.theme.name.toLowerCase() + ' '
-				           + control.params.theme.description.toLowerCase() + ' '
-				           + control.params.theme.tags.toLowerCase() + ' '
-				           + control.params.theme.author.toLowerCase();
+			    haystack = control.params.theme.name + ' '
+				           + control.params.theme.description + ' '
+				           + control.params.theme.tags + ' '
+				           + control.params.theme.author;
+			haystack = haystack.toLowerCase().replace( '-', ' ' );
 			if ( -1 !== haystack.search( term ) ) {
 				control.activate();
 			} else {

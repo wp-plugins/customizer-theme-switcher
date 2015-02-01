@@ -137,6 +137,10 @@
 }
 
 /* Details View */
+.theme-overlay {
+	display: none;
+}
+
 .modal-open .theme-overlay {
 	position: fixed;
 	left: 0;

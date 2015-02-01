@@ -75,7 +75,7 @@ function customizer_theme_switcher_register( $wp_customize ) {
 					<?php if ( 6 < count( $this->controls ) ) : ?>
 						<p><label>
 							<span class="screen-reader-text"><?php _e( 'Search installed themes...' ); ?></span>
-							<input type="search" id="themes-filter" placeholder="<?php _e( 'Search installed themes...' ); ?>" />
+							<input type="search" id="themes-filter" placeholder="<?php esc_attr_e( 'Search installed themes...' ); ?>" />
 						</label></p>
 					<?php endif; ?>
 					<div class="theme-browser rendered">

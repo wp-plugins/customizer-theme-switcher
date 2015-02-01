@@ -70,7 +70,7 @@ function customizer_theme_switcher_register( $wp_customize ) {
 						<a href="<?php echo admin_url( 'theme-install.php' ); ?>" target="_top" class="add-new-h2"><?php echo esc_html_x( 'Add New', 'Add new theme' ); ?></a>
 					<?php endif; ?>
 					</h2>
-					<div class="theme-overlay" tabindex="0"></div>
+					<div class="theme-overlay" tabindex="0" role="dialog" aria-label="<?php esc_attr_e( 'Theme details' ); ?>"></div>
 					<div id="customize-container"></div>
 					<?php if ( 6 < count( $this->controls ) ) : ?>
 						<p><label>

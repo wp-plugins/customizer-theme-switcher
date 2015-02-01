@@ -149,7 +149,7 @@ function customizer_theme_switcher_register( $wp_customize ) {
 
 				<# if ( ! data.theme.active ) { #>
 					<div class="theme-actions">
-						<a class="button" href="{{{ data.theme.actions.customize }}}" target="_top"><?php _e( 'Live Preview' ); ?></a>
+						<a class="button" href="<?php echo add_query_arg( 'theme', '{{{ data.theme.id }}}', remove_query_arg( 'theme' ) ); ?>" target="_top"><?php _e( 'Live Preview' ); ?></a>
 					</div>
 				<# } #>
 
@@ -281,7 +281,7 @@ function customize_themes_templates() {
 			<div class="theme-actions">
 				<# if ( ! data.active ) { #>
 					<div class="inactive-theme">
-						<a href="{{{ data.actions.customize }}}" target="_top" class="button button-primary"><?php _e( 'Live Preview' ); ?></a>
+						<a href="<?php echo add_query_arg( 'theme', '{{{ data.id }}}', remove_query_arg( 'theme' ) ); ?>" target="_top" class="button button-primary"><?php _e( 'Live Preview' ); ?></a>
 					</div>
 				<# } #>
 			</div>

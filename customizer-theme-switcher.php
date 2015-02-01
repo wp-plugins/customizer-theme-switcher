@@ -67,7 +67,7 @@ function customizer_theme_switcher_register( $wp_customize ) {
 					<h2><?php esc_html_e( 'Themes' ); ?>
 						<span class="title-count theme-count"><?php echo count( $this->controls ) - 1; ?></span>
 					<?php if ( ! is_multisite() && current_user_can( 'install_themes' ) ) : ?>
-						<a href="<?php echo admin_url( 'theme-install.php' ); ?>" class="hide-if-no-js add-new-h2"><?php echo esc_html_x( 'Add New', 'Add new theme' ); ?></a>
+						<a href="<?php echo admin_url( 'theme-install.php' ); ?>" target="_top" class="add-new-h2"><?php echo esc_html_x( 'Add New', 'Add new theme' ); ?></a>
 					<?php endif; ?>
 					</h2>
 					<div class="theme-overlay" tabindex="0"></div>
@@ -149,7 +149,7 @@ function customizer_theme_switcher_register( $wp_customize ) {
 
 				<# if ( ! data.theme.active ) { #>
 					<div class="theme-actions">
-						<a class="button" href="{{{ data.theme.actions.customize }}}"><?php _e( 'Live Preview' ); ?></a>
+						<a class="button" href="{{{ data.theme.actions.customize }}}" target="_top"><?php _e( 'Live Preview' ); ?></a>
 					</div>
 				<# } #>
 
@@ -181,7 +181,7 @@ function customizer_theme_switcher_register( $wp_customize ) {
 			}
 			?>
 			<div class="theme add-new-theme">
-				<a href="<?php echo admin_url( 'theme-install.php' ); ?>">
+				<a href="<?php echo admin_url( 'theme-install.php' ); ?>" target="_top">
 					<div class="theme-screenshot">
 						<span></span>
 					</div>
@@ -281,7 +281,7 @@ function customize_themes_templates() {
 			<div class="theme-actions">
 				<# if ( ! data.active ) { #>
 					<div class="inactive-theme">
-						<a href="{{{ data.actions.customize }}}" class="button button-primary"><?php _e( 'Live Preview' ); ?></a>
+						<a href="{{{ data.actions.customize }}}" target="_top" class="button button-primary"><?php _e( 'Live Preview' ); ?></a>
 					</div>
 				<# } #>
 			</div>

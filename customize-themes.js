@@ -336,7 +336,7 @@
 					return;
 				}
 
-				if ( 'button' === event.srcElement.className ) {
+				if ( 'button' === event.target.className ) {
 					return;
 				}
 

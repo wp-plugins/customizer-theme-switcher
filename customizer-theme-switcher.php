@@ -73,7 +73,7 @@ function customizer_theme_switcher_register( $wp_customize ) {
 					<div class="theme-overlay" tabindex="0" role="dialog" aria-label="<?php esc_attr_e( 'Theme details' ); ?>"></div>
 					<div id="customize-container"></div>
 					<?php if ( 6 < count( $this->controls ) ) : ?>
-						<p><label>
+						<p><label for="themes-filter">
 							<span class="screen-reader-text"><?php _e( 'Search installed themes...' ); ?></span>
 							<input type="search" id="themes-filter" placeholder="<?php esc_attr_e( 'Search installed themes...' ); ?>" />
 						</label></p>

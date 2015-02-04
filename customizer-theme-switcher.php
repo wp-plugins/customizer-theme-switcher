@@ -145,7 +145,7 @@ function customizer_theme_switcher_register( $wp_customize ) {
 				<div class="theme-author"><?php printf( __( 'By %s' ), '{{{ data.theme.author }}}' ); ?></div>
 
 				<# if ( data.theme.active ) { #>
-					<h3 class="theme-name" id="{{ data.theme.id }}-name"><span><?php _ex( 'Previewed:', 'theme' ); ?></span> {{{ data.theme.name }}}</h3>
+					<h3 class="theme-name" id="{{ data.theme.id }}-name"><span><?php _ex( 'Previewing:', 'theme' ); ?></span> {{{ data.theme.name }}}</h3>
 				<# } else { #>
 					<h3 class="theme-name" id="{{ data.theme.id }}-name">{{{ data.theme.name }}}</h3>
 				<# } #>

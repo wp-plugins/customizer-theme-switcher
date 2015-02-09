@@ -300,6 +300,7 @@
 			               .fadeIn( 'fast' )
 			               .focus();
 			$( 'body' ).addClass( 'modal-open' );
+			section.containFocus( section.overlay );
 			section.updateLimits();
 			callback();
 		},
@@ -313,6 +314,36 @@
 			$( 'body' ).removeClass( 'modal-open' );
 			this.overlay.fadeOut( 'fast' );
 			api.control( 'theme_' + this.currentTheme ).focus();
+		},
+
+		/**
+		 * Keep tab focus within the theme details modal.
+		 *
+		 * @since 4.2.0
+		 */
+		containFocus: function( el ) {
+			var tabbables;
+
+			el.on( 'keydown', function( event ) {
+
+				// Return if it's not the tab key
+				// When navigating with prev/next focus is already handled
+				if ( 9 !== event.keyCode ) {
+					return;
+				}
+
+				// uses jQuery UI to get the tabbable elements
+				tabbables = $( ':tabbable', el );
+
+				// Keep focus within the overlay
+				if ( tabbables.last()[0] === event.target && ! event.shiftKey ) {
+					tabbables.first().focus();
+					return false;
+				} else if ( tabbables.first()[0] === event.target && event.shiftKey ) {
+					tabbables.last().focus();
+					return false;
+				}
+			});
 		}
 	});
 

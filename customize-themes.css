@@ -71,31 +71,13 @@
 
 /* Panel-like behavior */
 #accordion-section-themes .accordion-section-title:after {
-	content: "\f341";
-	background: #f5f5f5;
-	color: #555;
-	width: 38px;
-	height: 100%;
-	margin: -11px -10px -11px 0;
-	line-height: 45px;
-	padding-left: 5px;
-	border-left: 1px solid #eee;
-	z-index: 0;
+	content: "\f148";
 }
 
 .rtl #accordion-section-themes .accordion-section-title:after {
-	content: "\f345";
-}
-
-#accordion-section-themes .accordion-section-title:focus:after,
-#accordion-section-themes .accordion-section-title:hover:after {
-	background: #ddd;
-	color: #000;
-	border: 1px solid #d9d9d9;
-	border-right: none;
-	margin-top: -12px;
-	line-height: 44px;
-	z-index: 1;
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 #customize-theme-controls .control-section.current-panel > h3.accordion-section-title {

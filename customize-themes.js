@@ -79,7 +79,7 @@
 			});
 
 			// Theme navigation in details view.
-			section.container.on( 'click keydown', '.left', function( event ) { 
+			section.container.on( 'click keydown', '.left', function( event ) {
 				if ( api.utils.isKeydownButNotEnterEvent( event ) ) {
 					return;
 				}
@@ -89,7 +89,7 @@
 				section.previousTheme();
 			});
 
-			section.container.on( 'click keydown', '.right', function( event ) { 
+			section.container.on( 'click keydown', '.right', function( event ) {
 				if ( api.utils.isKeydownButNotEnterEvent( event ) ) {
 					return;
 				}
@@ -99,7 +99,7 @@
 				section.nextTheme();
 			});
 
-			section.container.on( 'click keydown', '.theme-backdrop, .close', function( event ) { 
+			section.container.on( 'click keydown', '.theme-backdrop, .close', function( event ) {
 				if ( api.utils.isKeydownButNotEnterEvent( event ) ) {
 					return;
 				}

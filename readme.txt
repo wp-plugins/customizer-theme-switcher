@@ -3,14 +3,14 @@ Contributors: celloexpressions, wordpressdotorg
 Tags: themes, customizer, theme customizer
 Requires at least: 4.1
 Tested up to: 4.1
-Stable tag: 0.9
+Stable tag: 1.0
 Description: Bridging the UX gap between themes and the Customizer.
 License: GPLv2
 
 == Description ==
-This plugin is a WordPress core feature-plugin that's just getting started. The goal is to bring theme-browsing and theme-switching into the Customizer to streamline the themes experience.
+This plugin is a WordPress core feature-plugin proposed for WordPress 4.2. The goal is to bring theme-browsing and theme-switching into the Customizer to streamline the themes experience.
 
-The current status is extremely basic code-wise, but implements most of what's available on the themes admin page. Next steps are to consider whether to include things like theme deletion and broken-theme-management, and to evalute the UX.
+The current status is extremely basic code-wise, but implements most of what's available on the themes admin page. See our <a href="http://make.wordpress.org/core/tag/customizer-theme-switcher">posts on Make WordPress Core</a> for more info.
 
 If you're interested in contributing to this project, ping @celloexpressions on <a href="http://chat.wordpress.org/">WordPress core Slack</a>.
 
@@ -44,9 +44,11 @@ If you're interested in contributing to this project, ping @celloexpressions on 
 == Changelog ==
 See full details here: https://plugins.trac.wordpress.org/log/customizer-theme-switcher.
 
-Next steps:
-- More user testing
-- Adjustments per accessibility team feedback
+= 1.0 =
+* Iterate on the themes section heading display, more work coming there
+* Contain keyboard focus in the theme details modal
+* Audit escaping in JS templates
+* Code review from @MarkJaquith
 
 = 0.9 =
 * More misc. bugfixes

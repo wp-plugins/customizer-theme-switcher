@@ -75,7 +75,7 @@ See full details here: https://plugins.trac.wordpress.org/log/customizer-theme-s
 
 == Upgrade Notice ==
 = 1.0.1 =
-* Please update before updating to WordPress 4.2!
+* Please update this plugin to 1.0.1 before updating to WordPress 4.2!
 
 = 0.8 =
 * Iterations.

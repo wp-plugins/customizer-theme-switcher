@@ -3,7 +3,7 @@
  * Plugin Name: Customizer Theme Switcher
  * Plugin URI: http://wordpress.org/plugins/customizer-theme-switcher
  * Description: Bringing themes and the Customizer together.
- * Version: 1.0
+ * Version: 1.0.1
  * Author: Nick Halsey
  * Author URI: http://nick.halsey.co/
  * Tags: themes, customizer, theme customizer
@@ -27,6 +27,7 @@ along with WordPress; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 =====================================================================================
 */
+if ( $GLOBALS['wp_db_version'] < 31532 ) {
 
 add_action( 'customize_register', 'customizer_theme_switcher_register' );
 /**
@@ -280,4 +281,5 @@ function customize_themes_templates() {
 		</div>
 	</script>
 	<?php
+}
 }

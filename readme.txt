@@ -2,8 +2,8 @@
 Contributors: celloexpressions, wordpressdotorg
 Tags: themes, customizer, theme customizer
 Requires at least: 4.1
-Tested up to: 4.1
-Stable tag: 1.0
+Tested up to: 4.2
+Stable tag: trunk
 Description: Bridging the UX gap between themes and the Customizer.
 License: GPLv2
 
@@ -44,6 +44,9 @@ If you're interested in contributing to this project, ping @celloexpressions on 
 == Changelog ==
 See full details here: https://plugins.trac.wordpress.org/log/customizer-theme-switcher.
 
+= 1.0.1 =
+* Put in a kill switch so the plugin doesn't do anything once this code is brought into WordPress core
+
 = 1.0 =
 * Iterate on the themes section heading display, more work coming there
 * Contain keyboard focus in the theme details modal
@@ -71,6 +74,9 @@ See full details here: https://plugins.trac.wordpress.org/log/customizer-theme-s
 * Initial commit.
 
 == Upgrade Notice ==
+= 1.0.1 =
+* Please update before updating to WordPress 4.2!
+
 = 0.8 =
 * Iterations.
 
